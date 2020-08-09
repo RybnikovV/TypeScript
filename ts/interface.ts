@@ -15,7 +15,7 @@ const rect1: Rect = {
         height: 5
     }
 };
-//connt, но можем менять переменные внтури обьекта
+//const, но можем менять переменные внтури обьекта
 rect1.color = 'white';
 //а так уже нет
 // rect1 = {
@@ -41,7 +41,7 @@ rect4 = {
 //extends 
 
 interface RectWidthArea extends Rect {
-    getArea: () => number
+    getArea: () => number //Указали, что это функция и тип дпнных который будет возращен
 }
 
 const react5: RectWidthArea = {

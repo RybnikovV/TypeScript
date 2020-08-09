@@ -1,9 +1,15 @@
-function strip(x: string | number){
-    if(typeof x === 'number'){
+// Вспомогательные констуркции помогающие работать с типами
+ function strip(x: string | number){
+    if (typeof x === 'number')  {
         return x.toFixed(2)
     };
     return x.trim()
 }
+
+strip(152);
+//strip(true); // выдаст ошибку - Argument of type 'true' is not assignable to parameter of type 'string | number'.
+
+//=============================================================
 
 class MyResponse{
     header = 'response header';

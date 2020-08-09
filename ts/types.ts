@@ -6,6 +6,7 @@ const int: number = 42;
 const num: number = 4.2;
 
 const numberArray: number[] = [1, 1, 2, 3, 5, 8];
+// По сути это уже дженерик
 const numberArray2: Array<number> = [1, 1, 2, 3, 5, 8];
 
 //tuple
@@ -32,6 +33,7 @@ function throwError(message: string): never{ //лучше не исполтзо�
 //Type
 type Login = string;
 type ID = string | number;
+type someType = string | undefined | null;
 
 const login: Login = 'admin';
 

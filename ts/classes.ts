@@ -6,9 +6,12 @@ class TypeScript {
     }
 
     info(name:string){
-        return '[${name}]: Typescript version is ${this.version}'
+        return `[${name}]: Typescript version is ${this.version}`
     }
 }
+
+let obj = new TypeScript('1.27');
+console.log( obj.info('name') );
 
 //===========================================================================
 
@@ -47,14 +50,20 @@ class Animal{
 }
 
 class Cat extends Animal {
-    public setVoice(voice: string): void {
+    set vocal (voice: string) {
         this.voice = voice
-        //this.go() - ошибка т.к private
+        // this.go() //- ошибка т.к private
+    }
+
+    get vocal () {
+        return this.voice;
     }
 }
 
 const cat = new Cat();
-cat.setVoice('test');
+// cat.voice = "Мя"//ошибка тк protected
+cat.vocal = 'Мяу';
+console.log( cat.vocal );
 //===========================================================================
 
 

@@ -1,12 +1,14 @@
+//"дженерики — это возможность создавать компоненты, работающие не только с одним, а с несколькими типами данных".
+// Указываем обьект и из чего он состоит
 const arrayOfNumbers: Array<number> = [1, 2, 3];
-const arrayOfStr: Array<string> = ['Vadim', 'name', 'My'];
+const arrayOfStr: Array<string> = ['Vadim', 'is', 'name', 'My'];
 
-function reverse<T>( array ) :T{
+function reverse<T>( array: T[]) :T[]{
     return array.reverse();
 }
 
-console.log( reverse(arrayOfNumbers) );
-console.log( reverse(arrayOfStr) );
+console.log( reverse <number>(arrayOfNumbers) );
+console.log( reverse (arrayOfStr) );
 
 
 //Пример джинереков в контексте тождественной функции
